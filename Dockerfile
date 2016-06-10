@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:trusty
 MAINTAINER Scott Crooks <scott.crooks@gmail.com>
 
 # Prevent dpkg errors
