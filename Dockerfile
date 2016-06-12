@@ -5,7 +5,7 @@ MAINTAINER Scott Crooks <scott.crooks@gmail.com>
 ENV TERM=xterm-256color
 
 # Set mirrors to PDX
-RUN sed -i "s/archive.ubuntu.com/mirrors.pnl.gov/g" /etc/apt/sources.list
+RUN sed -i "s/archive.ubuntu.com/mirror.pnl.gov/g" /etc/apt/sources.list
 
 # Update mirrors
 RUN apt-get -y update
