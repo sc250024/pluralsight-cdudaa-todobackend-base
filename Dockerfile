@@ -14,7 +14,7 @@ RUN apt-get -y update
 RUN apt-get install && \
 	apt-get install -y \
 	-o APT::Install-Recommend=false -o APT::Install-Suggests=false \
-	python python-virtualenv
+	python python-virtualenv libpython2.7 python-mysqldb
 
 # Create virtual environment
 # Upgrade PIP in virtual environment to latest version
@@ -28,3 +28,5 @@ RUN rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/archives/*.deb && rm -f 
 ADD scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
+
+LABEL application=todobackend
